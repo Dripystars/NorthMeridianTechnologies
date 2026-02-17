@@ -13,7 +13,8 @@ const LockScreen: React.FC<LockScreenProps> = ({ onUnlock }) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const validPassword = 'GunRunnerv2.2';
+    const validPassword = import.meta.env.VITE_VALID_PASSWORD;
+
     
     // Case sensitive check
     if (password.trim() === validPassword) {
